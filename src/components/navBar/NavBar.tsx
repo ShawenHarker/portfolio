@@ -1,8 +1,10 @@
 import {Box, List, ListItem, Typography} from '@mui/material';
 import Logo from "../../components/logo";
 import theme from '../../utils';
+import {useState} from "react";
 
 export default function NavBar() {
+    const [value, setValue] = useState<number>();
     const menuItem = {
         color: theme.palette.common.white,
         cursor: 'pointer',
@@ -17,7 +19,11 @@ export default function NavBar() {
             'Services',
             'Portfolio',
             'Contact',
-        ]
+        ];
+
+    const handleClick = (index: number) => {
+        setValue(index);
+    }
 
     return (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -26,8 +32,8 @@ export default function NavBar() {
            </Box>
            <List style={{ display: 'flex', alignItems: 'center', marginTop: 10 }}>
                {
-                   pages.map((page) => (
-                       <ListItem key={page}>
+                   pages.map((page: string , index: number) => (
+                       <ListItem key={index} onClick={() => handleClick(index)}>
                            <Typography
                                variant="h5"
                                sx={menuItem}

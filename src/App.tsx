@@ -1,11 +1,11 @@
 import { ThemeProvider } from '@mui/material';
 import theme from "./utils";
-import Home from "./pages/home";
+import MainWrapper from "./pages/mainWrapper";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <MainWrapper />
     </ThemeProvider>
   );
 }
