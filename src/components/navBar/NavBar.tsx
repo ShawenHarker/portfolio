@@ -31,7 +31,9 @@ export default function NavBar() {
                            <Typography
                                variant="h5"
                                sx={menuItem}
-                           >{page}</Typography>
+                           >
+                               {page}
+                           </Typography>
                        </ListItem>
                    ))
                }
