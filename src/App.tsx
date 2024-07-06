@@ -1,11 +1,15 @@
 import { ThemeProvider } from '@mui/material';
 import theme from "./utils";
-import MainWrapper from "./pages/mainWrapper";
+import MainLayout from "./layouts/MainLayout";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <MainWrapper />
+      <Provider store={store}>
+          <MainLayout />
+      </Provider>
     </ThemeProvider>
   );
 }
