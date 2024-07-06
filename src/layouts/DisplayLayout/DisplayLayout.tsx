@@ -16,9 +16,9 @@ const DisplayLayout = () => {
         case 1:
             return <About />;
         case 2:
-            return <Services />;
-        case 3:
             return <Portfolio />;
+        case 3:
+            return <Services />;
         default:
             return <Home />;
     }

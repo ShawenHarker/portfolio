@@ -33,7 +33,7 @@ const theme = createTheme({
         h5: {
             fontFamily: heading,
             fontSize: 20,
-            fontWeight: 600,
+            fontWeight: 700,
         },
         subtitle1: {
             fontSize: 20,
