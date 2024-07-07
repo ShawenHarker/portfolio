@@ -12,17 +12,22 @@ const NavBar = () => {
     const menuItem = {
         color: theme.palette.common.white,
         cursor: 'pointer',
-        '&:active': {
-            color: theme.palette.text.secondary,
-        },
+        position: 'relative',
+        transition: 'color 500ms ease-in, box-shadow 500ms ease-in',
         '&:hover': {
             color: theme.palette.text.secondary,
+        },
+        '&:active': {
+            color: theme.palette.text.secondary,
+            background: 'transparent',
+            textShadow: '2px 2px 6px #92d3fa',
         }
     };
 
     const activeMenuItem = {
         ...menuItem,
         color: theme.palette.text.secondary,
+        textShadow: '2px 2px 6px #92d3fa',
     };
 
     const pages = [
